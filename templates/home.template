@@ -1,0 +1,21 @@
+{% extends 'base.template' %} {% block content %}
+
+<section>
+
+	{% for a in item %}
+	<div class="card">
+		<form method="post" action="/task_delete?key={{ a.key }}">
+		<p>
+			{{ a.subject }}
+			<br>
+			<br>
+			{{ a.plain_body }}
+		</p>
+    <input class="bttn" type="submit" value="Delete" />
+		</form>
+	</div>
+	<br> {% endfor %}
+
+</section>
+
+{% endblock %}

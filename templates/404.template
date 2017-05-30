@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+  <title>404</title>
+  <link rel="stylesheet" type="text/css" href="css/404.css">
+</head>
+
+<body>
+  <div class="terminal">
+    <span class="dollar"></span> ls -R | grep ":$" | sed -e 's/:$//'....
+    <br/>
+    <span class="dollar"></span> this isn't a real terminal
+    <br/>
+    <span class="dollar"></span> you just wasted 10 seconds of your life
+    <br/>
+    <span class="dollar"></span> those 10 seconds belong to me now LOL
+    <br/>
+    <span class="dollar"></span> you really should be on your way
+    <br/>
+    <span class="dollar"></span> you have work to do, right?
+    <br/>
+    <span class="dollar"></span> return <a href="/">home?</a>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="js/404.js"></script>
+
+</body>
+
+</html>

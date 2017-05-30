@@ -1,0 +1,90 @@
+<html>
+<title>E-Mail ToDo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+<style>
+	p {
+		font-family: 'Josefin Sans', sans-serif;
+		margin: 10px 5px 15px 10px;
+		text-align: left;
+	}
+
+	body {
+		background: #E2E1E0;
+		text-align: center;
+	}
+
+	section {
+		display: inline-block;
+	}
+
+	section::after {
+		clear: both;
+		content: '';
+		display: block;
+	}
+
+	[class^=card] {
+		background: #FFF;
+		border-radius: 2px;
+		display: inline-block;
+		height: 300px;
+		margin: 1rem;
+		position: relative;
+		width: 300px;
+		transition: box-shadow 0.3s cubic-bezier(.25, .8, .25, 1);
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+		float: left;
+	}
+
+	.card {
+		clear: left;
+	}
+
+	section:hover .card,
+	.card:hover {
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+	}
+
+	.bttn {
+		font-family: 'Josefin Sans', sans-serif;
+		font-weight: bold;
+    background-color: #F44336;
+		font-size: 12px;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+		box-shadow: 0 19px 38px rgba(0, 0, 0, 0.30), 0 15px 12px rgba(0, 0, 0, 0.22);
+		position:absolute;
+    transition: .5s ease;
+    top: 75%;
+    left: 65%;
+}
+
+.bttn:hover {
+	-webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -o-transform: scale(1.05);
+}
+
+</style>
+
+<body>
+
+	<!-- flask / jinja2 content -->
+	{% block content %}{% endblock %}
+	<!-- end flask / jinja2 content -->
+
+
+</body>
+
+
+</html>
