@@ -9,6 +9,7 @@ from email.utils import getaddresses, parseaddr
 import os
 import json
 import jinja2
+import pytz
 import webapp2
 import logging
 
@@ -31,6 +32,17 @@ JINJA_ENVIRONMENT = jinja2.Environment(
 
 # JSON parse filter
 JINJA_ENVIRONMENT.filters['tojson'] = json.dumps
+
+def datefilter(value, format="%Y-%m-%d"):
+    # timezone you want to convert to from UTC
+    tz = pytz.timezone('US/Pacific')
+    utc = pytz.timezone('UTC')
+    value = utc.localize(value, is_dst=None).astimezone(pytz.utc)
+    local_dt = value.astimezone(tz)
+    return local_dt.strftime(format)
+
+# Date filter
+JINJA_ENVIRONMENT.filters['datefilter'] = datefilter
 
 
 # Basehandler class for inheritance
